@@ -17,8 +17,9 @@ const HomeProjects = () => {
   console.log(projects);
   ///screen size
   const windowWidth = window.screen.width;
-  const overflow = windowWidth > 1023 ? "scroll" : "hidden";
-  const height = windowWidth > 1023 ? "38rem" : "auto";
+  const overflow = windowWidth > 1024 ? "scroll" : "hidden";
+  const height = windowWidth > 1024 && "38rem";
+  console.log(overflow);
   //modal
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);

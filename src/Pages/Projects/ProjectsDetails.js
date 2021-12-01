@@ -21,8 +21,8 @@ const ProjectsDetails = () => {
   console.log(project);
   //screen size
   const windowWidth = window.screen.width;
-  const overflow = windowWidth > 1023 ? "scroll" : "hidden";
-  const height = windowWidth > 1023 ? "38rem" : "auto";
+  const overflow = windowWidth > 1024 ? "scroll" : "hidden";
+  const height = windowWidth > 1024 ? "38rem" : "auto";
   return (
     <Box
       sx={{
@@ -142,7 +142,13 @@ export const projects = [
     id: 5,
     title: "NSTU",
     duration: "September,2021",
-    technologies: ["React Router", "React-Bootstrap", "React", " Font Awesome"],
+    technologies: [
+      "React Router",
+      "React-Bootstrap",
+      " Font Awesome",
+      "React",
+      "Bootstrap",
+    ],
 
     img: "  https://i.ibb.co/x1rRWyT/nstu.jpg",
     img1: " https://i.ibb.co/Vwg3Kn8/nstu1.jpg",
