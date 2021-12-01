@@ -83,5 +83,23 @@
         "clientSide": "https://github.com/ImtiazMahmod/autolane-client",
         "description1": " Expertize for Mechanics & Service.  Front End React app for getting mechanic service. Authentication system implemented.",
         "description2": " Google Sign in implemented. 24/7 emergency Service. Friendly Mechanics."
+    },
+    {
+        "id": 5,
+        "title": "NSTU",
+        "duration": "September,2021",
+        "technologies": [
+            "React Router",
+            "React-Bootstrap",
+            "React",
+            " Font Awesome"
+        ],
+        "img": "  https://i.ibb.co/x1rRWyT/nstu.jpg",
+        "img1": " https://i.ibb.co/Vwg3Kn8/nstu1.jpg",
+        "img2": "  https://i.ibb.co/gmS6bpm/nstu2.jpg",
+        "preview": " https://nstu.netlify.app/",
+        "clientSide": "https://github.com/ImtiazMahmod/NSTU",
+        "description1": "Represent official Noakhali Science & Technical University Site demo. Academic Details. Front End React app for university. Administrative Details. About Details.",
+        "description2": " React-Router implemented. React Bootstrap implemented."
     }
 ]
