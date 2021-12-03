@@ -5,7 +5,6 @@ import {
   Box,
   Typography,
   Button,
-  Divider,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
@@ -31,7 +30,7 @@ const SingleProjects = ({ project, handleOpen }) => {
   //screen size
   const windowWidth = window.screen.width;
 
-  const height = windowWidth > 380 ? "28rem" : "33reem";
+  const height = windowWidth > 380 ? "28rem" : "33rem";
   console.log(windowWidth);
   console.log(height);
   return (
