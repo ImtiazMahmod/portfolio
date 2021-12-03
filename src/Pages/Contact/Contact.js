@@ -1,4 +1,4 @@
-import { Divider, TextField, Typography, Button } from "@mui/material";
+import { Divider, TextField, Typography, Button, Toolbar } from "@mui/material";
 import { styled } from "@mui/styles";
 import { Box } from "@mui/system";
 import React, { useRef } from "react";
@@ -164,6 +164,7 @@ const Contact = () => {
           SEND MESSAGE
         </Button>
       </form>
+      <Toolbar />
     </Box>
   );
 };

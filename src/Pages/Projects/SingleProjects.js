@@ -5,6 +5,7 @@ import {
   Box,
   Typography,
   Button,
+  Divider,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
@@ -14,7 +15,7 @@ import { Link } from "react-router-dom";
 const SingleProjects = ({ project, handleOpen }) => {
   //modal
 
-  const { title, img, preview, technologies, id } = project;
+  const { title, img, preview, description1, technologies, id } = project;
   ///anchor style
   const useStyles = makeStyles({
     root: {
@@ -27,6 +28,12 @@ const SingleProjects = ({ project, handleOpen }) => {
     },
   });
   const { root } = useStyles();
+  //screen size
+  const windowWidth = window.screen.width;
+
+  const height = windowWidth > 380 ? "28rem" : "33reem";
+  console.log(windowWidth);
+  console.log(height);
   return (
     <div>
       <Card
@@ -35,7 +42,9 @@ const SingleProjects = ({ project, handleOpen }) => {
           bgcolor: "#31313A",
           borderRadius: "10%",
           p: 2,
-          height: "23rem",
+          height: height,
+          mx: "auto",
+          my: 1,
         }}
       >
         <img height="150" width="100%" src={img} alt={title} />
@@ -50,7 +59,7 @@ const SingleProjects = ({ project, handleOpen }) => {
           </Typography>
           <Box sx={{ display: "flex", flexWrap: "wrap", mt: 2 }}>
             {" "}
-            {technologies.slice(3, 5).map((tech) => (
+            {technologies.slice(3, 6).map((tech) => (
               <Typography
                 variant="subtitle2"
                 sx={{
@@ -65,6 +74,9 @@ const SingleProjects = ({ project, handleOpen }) => {
                 {tech}
               </Typography>
             ))}
+            <Typography sx={{ color: "gray", my: 1 }}>
+              {description1}
+            </Typography>
           </Box>
         </CardContent>
         <CardActions sx={{ display: "flex", justifyContent: "center" }}>

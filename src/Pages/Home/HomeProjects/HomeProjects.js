@@ -39,11 +39,12 @@ const HomeProjects = () => {
         <Typography sx={{ fontWeight: "bold", pb: 3 }} variant="h5">
           Projects
         </Typography>
-        <Divider />
+        <Divider sx={{ bgcolor: (theme) => theme.palette.divider }} />
       </Box>
+      {/* <Divider light /> */}
       <Grid container spacing={2} columns={{ xs: 4, sm: 8, md: 12, lg: 12 }}>
         {projects.slice(0, 6).map((project) => (
-          <Grid item key={project.id} xs={4} sm={4} md={4} lg={6}>
+          <Grid item key={project.id} xs={4} sm={8} md={12} lg={12}>
             <SingleProjects project={project} handleOpen={handleOpen} />
           </Grid>
         ))}

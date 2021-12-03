@@ -66,8 +66,7 @@ export default function Home() {
             xs={12}
             sx={{
               display: { xs: "block", sm: "none" },
-              position: "fixed",
-              top: 0,
+
               width: 1,
             }}
           >
