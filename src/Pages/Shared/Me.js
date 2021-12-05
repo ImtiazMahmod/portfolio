@@ -11,6 +11,7 @@ import { saveAs } from "file-saver";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
+import Typewriter from "typewriter-effect";
 
 const Me = () => {
   const windowWidth = window.screen.width;
@@ -76,7 +77,18 @@ const Me = () => {
       </Box>
       <Box data-aos="fade-up" sx={{ mt: 3 }}>
         <Typography variant="h4">Imtiaz Mahmod Misbah</Typography>
-        <Typography color="#FF9800">Web Developer</Typography>
+
+        <Box sx={{ color: "#FF9800" }}>
+          {" "}
+          <Typewriter
+            options={{
+              strings: ["Web Developer", "MERN Stack Developer"],
+              autoStart: true,
+              loop: true,
+              delay: 100,
+            }}
+          />
+        </Box>
         <Box sx={{ mb: 10 }}>
           {" "}
           <a
