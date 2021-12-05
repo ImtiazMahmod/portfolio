@@ -1,4 +1,6 @@
 .App {
-  font-family: "Open Sans", sans-serif;
   color: #e0e0e1;
+  font-family: "Lobster", cursive;
+  /* font-size: 14px; */
+  line-height: 1.5;
 }

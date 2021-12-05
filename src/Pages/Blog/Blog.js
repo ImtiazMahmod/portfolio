@@ -21,7 +21,11 @@ const Blog = () => {
         my: 2,
       }}
     >
-      <Typography data-aos="fade-on" variant="h6" sx={{ p: 3 }}>
+      <Typography
+        data-aos="fade-on"
+        variant="h5"
+        sx={{ p: 3, fontWeight: "bold" }}
+      >
         <span style={{ color: "#FFB30D" }}>Blog</span>s
       </Typography>
       <Divider />{" "}

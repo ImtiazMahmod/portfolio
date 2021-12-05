@@ -24,7 +24,11 @@ const About = () => {
         my: 2,
       }}
     >
-      <Typography data-aos="fade-on" variant="h6" sx={{ p: 3 }}>
+      <Typography
+        data-aos="fade-on"
+        variant="h5"
+        sx={{ p: 3, fontWeight: "bold" }}
+      >
         <span style={{ color: "#FFB30D" }}>About </span>
         Me
       </Typography>
@@ -92,8 +96,12 @@ const About = () => {
             width="80"
             alt=""
           />
-          <Typography>Imtiaz Mahmod Misbah</Typography>
-          <Typography color="gray">Web Developer</Typography>
+          <Typography variant="h6" fontFamily="Lobster">
+            Imtiaz Mahmod Misbah
+          </Typography>
+          <Typography color="gray" fontFamily="Lobster">
+            Web Developer
+          </Typography>
         </Box>
       </Box>
     </Box>

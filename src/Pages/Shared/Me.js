@@ -76,7 +76,9 @@ const Me = () => {
         />
       </Box>
       <Box data-aos="fade-up" sx={{ mt: 3 }}>
-        <Typography variant="h4">Imtiaz Mahmod Misbah</Typography>
+        <Typography fontFamily="Lobster" variant="h4">
+          Imtiaz Mahmod Misbah
+        </Typography>
 
         <Box sx={{ color: "#FF9800" }}>
           {" "}
