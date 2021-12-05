@@ -130,7 +130,6 @@ export default function Navigation() {
         sx={{
           bgcolor: "#31313A",
           textAlign: "center",
-          borderBottom: "1px solid gray",
           borderRadius: "0 0 0 5% ",
         }}
       >

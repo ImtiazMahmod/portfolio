@@ -16,8 +16,6 @@ export default function NavigationSmall() {
           sx={{
             bgcolor: "#31313A",
             textAlign: "center",
-            borderBottom: "1px solid gray",
-            // borderRadius: "5% 0 0 5%",
             flexGrow: 1,
           }}
         >
@@ -36,7 +34,6 @@ export default function NavigationSmall() {
           sx={{
             bgcolor: "#31313A",
             textAlign: "center",
-            borderBottom: "1px solid gray",
             flexGrow: 1,
           }}
         >
@@ -54,7 +51,6 @@ export default function NavigationSmall() {
           sx={{
             bgcolor: "#31313A",
             textAlign: "center",
-            borderBottom: "1px solid gray",
             flexGrow: 1,
           }}
         >
@@ -75,7 +71,6 @@ export default function NavigationSmall() {
           sx={{
             bgcolor: "#31313A",
             textAlign: "center",
-            borderBottom: "1px solid gray",
             flexGrow: 1,
           }}
         >
@@ -93,7 +88,6 @@ export default function NavigationSmall() {
           sx={{
             bgcolor: "#31313A",
             textAlign: "center",
-            borderBottom: "1px solid gray",
             flexGrow: 1,
           }}
         >

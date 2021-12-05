@@ -80,7 +80,7 @@ const Me = () => {
           Imtiaz Mahmod Misbah
         </Typography>
 
-        <Box sx={{ color: "#FF9800" }}>
+        <Box sx={{ color: "#FF9800", fontSize: "20px" }}>
           {" "}
           <Typewriter
             options={{

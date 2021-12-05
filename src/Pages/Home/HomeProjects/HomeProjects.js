@@ -32,7 +32,7 @@ const HomeProjects = () => {
       id="projects"
       sx={{
         bgcolor: "#31313A",
-        borderRadius: "2%",
+        borderRadius: "1%",
         height: height,
         overflowY: overflow,
         my: 2,

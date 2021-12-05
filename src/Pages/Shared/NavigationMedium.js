@@ -96,7 +96,6 @@ export default function NavigationMedium() {
         sx={{
           bgcolor: "#31313A",
           textAlign: "center",
-          borderBottom: "1px solid gray",
           borderRadius: "0 0 5% 5% ",
         }}
       >
