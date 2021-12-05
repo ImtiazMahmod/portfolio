@@ -52,12 +52,23 @@ const HomeProjects = () => {
       {/* <Divider light /> */}
       <Grid container spacing={2} columns={{ xs: 4, sm: 8, md: 12, lg: 12 }}>
         {projects.map((project) => (
-          <Grid item key={project.id} xs={4} sm={8} md={12} lg={12}>
+          <Grid
+            data-aos={windowWidth < 1024 && "fade-up"}
+            item
+            key={project.id}
+            xs={4}
+            sm={8}
+            md={12}
+            lg={12}
+          >
             <SingleProjects project={project} handleOpen={handleOpen} />
           </Grid>
         ))}
       </Grid>
-      <Box data-aos="fade-on" sx={{ textAlign: "center", my: 5 }}>
+      <Box
+        data-aos={windowWidth < 1024 && "fade-on"}
+        sx={{ textAlign: "center", my: 5 }}
+      >
         {" "}
         <Link style={{ textDecoration: "none" }} to={`/projects`}>
           {" "}

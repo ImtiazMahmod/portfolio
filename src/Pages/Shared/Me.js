@@ -94,7 +94,6 @@ const Me = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
             <GitHubIcon className={root} sx={{ mx: 1, color: "gray" }} />
           </a>
           <a
@@ -111,7 +110,7 @@ const Me = () => {
           >
             <LanguageIcon className={root} sx={{ mx: 1, color: "gray" }} />
           </a>
-        </Box>{" "}
+        </Box>
       </Box>
       <Divider color={grey[700]} />
       <Box data-aos="flip-left" sx={{ display: "flex", borderTop: "1px " }}>

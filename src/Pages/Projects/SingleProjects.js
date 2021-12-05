@@ -36,7 +36,6 @@ const SingleProjects = ({ project, handleOpen }) => {
   return (
     <div>
       <Card
-        data-aos="fade-up"
         sx={{
           maxWidth: 345,
           bgcolor: "#31313A",

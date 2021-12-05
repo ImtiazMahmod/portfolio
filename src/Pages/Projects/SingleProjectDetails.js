@@ -14,7 +14,7 @@ const SingleProjectDetails = ({ project }) => {
       transition: "all .5s ease",
       "&:hover": {
         color: "#FF9800",
-        transform: "scale(1.1)",
+        transform: "scale(1.3)",
       },
     },
   });
@@ -39,6 +39,8 @@ const SingleProjectDetails = ({ project }) => {
     });
     AOS.refresh();
   }, []);
+  //screen size
+  const windowWidth = window.screen.width;
 
   return (
     <Box data-aos="fade-up">
@@ -73,14 +75,19 @@ const SingleProjectDetails = ({ project }) => {
         </Typography>
         <img data-aos="zoom-in-up" src={img1} width="100%" alt={title} />
         <Typography
-          data-aos="fade-left"
+          data-aos={windowWidth < 1024 && "fade-left"}
           sx={{ my: 3 }}
           variant="subtitle2"
           color={grey[500]}
         >
           {description2}
         </Typography>
-        <img data-aos="zoom-in-up" src={img2} width="100%" alt={title} />
+        <img
+          data-aos={windowWidth < 1024 && "zoom-in-up"}
+          src={img2}
+          width="100%"
+          alt={title}
+        />
         <Box sx={{ textAlign: "center", my: 2 }}>
           <Button sx={{ m: 1, px: 2 }} size="small" color="warning">
             <a href={preview} className={root} target="_blank" rel="noreferrer">
@@ -121,7 +128,7 @@ const SingleProjectDetails = ({ project }) => {
           {" "}
           {technologies.map((tech) => (
             <Typography
-              data-aos="fade-on"
+              data-aos={windowWidth < 1024 && "fade-on"}
               variant="subtitle2"
               sx={{
                 color: "#FFB30D",
