@@ -9,8 +9,12 @@ const About = () => {
   const height = windowWidth > 1024 && "38rem";
   console.log(windowWidth);
   console.log(overflow, height);
+  const aos =
+    (windowWidth > 1024 && "fade-right") ||
+    (windowWidth > 426 ? "fade-right" : "fade-up");
   return (
     <Box
+      data-aos={aos}
       id="about"
       sx={{
         bgcolor: "#31313A",
@@ -20,16 +24,17 @@ const About = () => {
         my: 2,
       }}
     >
-      <Typography variant="h6" sx={{ p: 3 }}>
-        About Me
+      <Typography data-aos="fade-on" variant="h6" sx={{ p: 3 }}>
+        <span style={{ color: "#FFB30D" }}>About </span>
+        Me
       </Typography>
       <Divider />
-      <Typography sx={{ p: 3 }}>
+      <Typography data-aos="fade-up" sx={{ p: 3 }}>
         Hey! I'm Imtiaz Mahmod Misbah. Web Developer from Bangladesh. I have
         rich experience in both front end and back end development. I love to
         talk with you about our unique.
       </Typography>
-      <Box sx={{ px: 3, color: "#A2A2A6" }}>
+      <Box data-aos="fade-up" sx={{ px: 3, color: "#A2A2A6" }}>
         <Typography>
           {" "}
           <span style={{ color: "#e0e0e1" }}>E-mail </span> | @gmail.com
@@ -49,7 +54,7 @@ const About = () => {
           <span style={{ color: "#e0e0e1" }}>Freelance </span> | Available
         </Typography>
       </Box>
-      <Box sx={{ my: 5 }}>
+      <Box data-aos="fade-up" sx={{ my: 5 }}>
         {" "}
         <Typography variant="h6" sx={{ p: 3 }}>
           Qoute
@@ -67,7 +72,10 @@ const About = () => {
             "
           </Typography>
 
-          <Typography sx={{ color: "#A2A2A6", textAlign: "center" }}>
+          <Typography
+            data-aos="fade-right"
+            sx={{ color: "#A2A2A6", textAlign: "center" }}
+          >
             The best preparation for tomorrow is doing your best today.Fear
             keeps us focused on the past or worried about the future. If we can
             acknowledge our fear, we can realize that right now we are okay.
@@ -76,7 +84,7 @@ const About = () => {
             still hear the voices of our loved ones.
           </Typography>
         </Box>
-        <Box sx={{ textAlign: "center", py: 4 }}>
+        <Box data-aos="zoom-in" sx={{ textAlign: "center", py: 4 }}>
           <img
             style={{ borderRadius: "50%", border: "2px solid gray" }}
             src="https://i.ibb.co/82CVWx0/hero.png"

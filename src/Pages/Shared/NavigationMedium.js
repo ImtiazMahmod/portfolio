@@ -19,7 +19,14 @@ export default function NavigationMedium() {
       >
         {" "}
         <Button href="#">
-          <Box sx={{ color: "#e0e0e1", "&:hover": { color: "#FF9800" }, p: 2 }}>
+          <Box
+            sx={{
+              color: "#e0e0e1",
+              transition: "all .3s ease",
+              "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+              p: 2,
+            }}
+          >
             <HomeIcon fontSize="medium" />{" "}
             <Typography variant="subtitle2">HOME</Typography>
           </Box>
@@ -33,7 +40,14 @@ export default function NavigationMedium() {
         }}
       >
         <Button href="#about">
-          <Box sx={{ color: "#e0e0e1", "&:hover": { color: "#FF9800" }, p: 2 }}>
+          <Box
+            sx={{
+              color: "#e0e0e1",
+              transition: "all .3s ease",
+              "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+              p: 2,
+            }}
+          >
             <PersonIcon fontSize="medium" />
             <Typography variant="subtitle2">ABOUT</Typography>
           </Box>
@@ -63,7 +77,14 @@ export default function NavigationMedium() {
         }}
       >
         <Button href="#contact">
-          <Box sx={{ color: "#e0e0e1", "&:hover": { color: "#FF9800" }, p: 2 }}>
+          <Box
+            sx={{
+              color: "#e0e0e1",
+              transition: "all .3s ease",
+              "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+              p: 2,
+            }}
+          >
             <Typography sx={{ fontWeight: "bold" }} variant="h5">
               @
             </Typography>
@@ -80,7 +101,14 @@ export default function NavigationMedium() {
         }}
       >
         <Button href="#blog">
-          <Box sx={{ color: "#e0e0e1", "&:hover": { color: "#FF9800" }, p: 2 }}>
+          <Box
+            sx={{
+              color: "#e0e0e1",
+              transition: "all .3s ease",
+              "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+              p: 2,
+            }}
+          >
             <Typography sx={{ fontWeight: "bold" }} variant="h5">
               <BookIcon />
             </Typography>

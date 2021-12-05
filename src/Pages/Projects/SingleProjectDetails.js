@@ -1,17 +1,20 @@
 import { Button, Divider, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useEffect } from "react";
 import TodayIcon from "@mui/icons-material/Today";
 import { makeStyles } from "@mui/styles";
+import AOS from "aos";
+
 const SingleProjectDetails = ({ project }) => {
   ///anchor style
   const useStyles = makeStyles({
     root: {
       color: "#e0e0e1",
-      transition: "color .5s ease",
+      transition: "all .5s ease",
       "&:hover": {
         color: "#FF9800",
+        transform: "scale(1.1)",
       },
     },
   });
@@ -30,14 +33,25 @@ const SingleProjectDetails = ({ project }) => {
     serverSide,
   } = project[0];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <Box>
-      <Typography sx={{ p: 3, fontWeight: "bold" }} variant="h5">
+    <Box data-aos="fade-up">
+      <Typography
+        data-aos="fade-on"
+        sx={{ p: 3, fontWeight: "bold" }}
+        variant="h5"
+      >
         <span style={{ color: "#FFB30D" }}>Project</span> Explore
       </Typography>
       <Divider />
       <Box sx={{ p: 3 }}>
-        <Typography sx={{ fontWeight: "bold" }} variant="h4">
+        <Typography data-aos="fade-on" sx={{ fontWeight: "bold" }} variant="h4">
           {title}
         </Typography>
 
@@ -48,15 +62,25 @@ const SingleProjectDetails = ({ project }) => {
         >
           <TodayIcon sx={{ mr: 1 }} /> {duration}
         </Typography>
-        <img src={img} width="100%" alt={title} />
-        <Typography sx={{ my: 3 }} variant="subtitle2" color={grey[500]}>
+        <img data-aos="zoom-in-up" src={img} width="100%" alt={title} />
+        <Typography
+          data-aos="fade-right"
+          sx={{ my: 3 }}
+          variant="subtitle2"
+          color={grey[500]}
+        >
           {description1}
         </Typography>
-        <img src={img1} width="100%" alt={title} />
-        <Typography sx={{ my: 3 }} variant="subtitle2" color={grey[500]}>
+        <img data-aos="zoom-in-up" src={img1} width="100%" alt={title} />
+        <Typography
+          data-aos="fade-left"
+          sx={{ my: 3 }}
+          variant="subtitle2"
+          color={grey[500]}
+        >
           {description2}
         </Typography>
-        <img src={img2} width="100%" alt={title} />
+        <img data-aos="zoom-in-up" src={img2} width="100%" alt={title} />
         <Box sx={{ textAlign: "center", my: 2 }}>
           <Button sx={{ m: 1, px: 2 }} size="small" color="warning">
             <a href={preview} className={root} target="_blank" rel="noreferrer">
@@ -97,6 +121,7 @@ const SingleProjectDetails = ({ project }) => {
           {" "}
           {technologies.map((tech) => (
             <Typography
+              data-aos="fade-on"
               variant="subtitle2"
               sx={{
                 color: "#FFB30D",

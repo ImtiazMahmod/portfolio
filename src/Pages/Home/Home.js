@@ -30,6 +30,7 @@ export default function Home() {
         >
           {" "}
           <Grid
+            data-aos="fade-on"
             item
             lg={1}
             sm={2}
@@ -44,6 +45,7 @@ export default function Home() {
             <Navigation />
           </Grid>
           <Grid
+            data-aos="fade-on"
             item
             lg={1}
             sm={2}
@@ -62,6 +64,7 @@ export default function Home() {
             <NavigationMedium />
           </Grid>
           <Grid
+            data-aos="fade-on"
             item
             xs={12}
             sx={{
@@ -106,7 +109,15 @@ export default function Home() {
           </Grid>
           <Grid lg={5} sx={{ display: { xs: "none", lg: "block" } }} item>
             <Routes>
-              <Route exact path="/" element={<About />} />
+              <Route
+                exact
+                path="/"
+                element={
+                  <Box data-aos="fade-right">
+                    <About />
+                  </Box>
+                }
+              />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/projects" element={<HomeProjects />} />

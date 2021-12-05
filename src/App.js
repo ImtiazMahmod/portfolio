@@ -1,7 +1,14 @@
 import "./App.css";
+import "aos/dist/aos.css";
 import Home from "./Pages/Home/Home";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+    AOS.refresh();
+  }, []);
   return (
     <div className="App">
       <BrowserRouter>

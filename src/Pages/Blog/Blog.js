@@ -6,8 +6,12 @@ const Blog = () => {
   const windowWidth = window.screen.width;
   const overflow = windowWidth > 1024 ? "scroll" : "hidden";
   const height = windowWidth > 1024 && "38rem";
+  const aos =
+    (windowWidth > 1024 && "fade-right") ||
+    (windowWidth > 426 ? "fade-right" : "fade-up");
   return (
     <Box
+      data-aos={aos}
       id="blog"
       sx={{
         bgcolor: "#31313A",
@@ -17,11 +21,12 @@ const Blog = () => {
         my: 2,
       }}
     >
-      <Typography variant="h6" sx={{ p: 3 }}>
-        Blog
+      <Typography data-aos="fade-on" variant="h6" sx={{ p: 3 }}>
+        <span style={{ color: "#FFB30D" }}>Blog</span>s
       </Typography>
       <Divider />{" "}
       <Typography
+        data-aos="fade-up"
         variant="h4"
         sx={{ p: 3, textAlign: "center", color: "gray" }}
       >

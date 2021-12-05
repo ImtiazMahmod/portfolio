@@ -23,8 +23,12 @@ const HomeProjects = () => {
   //modal
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
+  const aos =
+    (windowWidth > 1024 && "fade-right") ||
+    (windowWidth > 426 ? "fade-left" : "fade-up");
   return (
     <Box
+      data-aos={aos}
       id="projects"
       sx={{
         bgcolor: "#31313A",
@@ -36,20 +40,24 @@ const HomeProjects = () => {
     >
       <Box sx={{ p: 3 }}>
         {" "}
-        <Typography sx={{ fontWeight: "bold", pb: 3 }} variant="h5">
-          Projects
+        <Typography
+          data-aos="fade-on"
+          sx={{ fontWeight: "bold", pb: 3 }}
+          variant="h5"
+        >
+          <span style={{ color: "#FFB30D" }}>Project</span>s
         </Typography>
         <Divider sx={{ bgcolor: (theme) => theme.palette.divider }} />
       </Box>
       {/* <Divider light /> */}
       <Grid container spacing={2} columns={{ xs: 4, sm: 8, md: 12, lg: 12 }}>
-        {projects.slice(0, 6).map((project) => (
+        {projects.map((project) => (
           <Grid item key={project.id} xs={4} sm={8} md={12} lg={12}>
             <SingleProjects project={project} handleOpen={handleOpen} />
           </Grid>
         ))}
       </Grid>
-      <Box sx={{ textAlign: "center", my: 5 }}>
+      <Box data-aos="fade-on" sx={{ textAlign: "center", my: 5 }}>
         {" "}
         <Link style={{ textDecoration: "none" }} to={`/projects`}>
           {" "}

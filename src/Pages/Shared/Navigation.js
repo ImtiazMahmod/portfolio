@@ -6,8 +6,23 @@ import BookIcon from "@mui/icons-material/Book";
 import { Box } from "@mui/system";
 import { Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { makeStyles } from "@mui/styles";
 
 export default function Navigation() {
+  const useStyles = makeStyles({
+    root: {
+      color: "#e0e0e1",
+      transition: "all .3s ease",
+      "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+      "&:active": {
+        border: "1px black solid",
+        backgroundColor: "green",
+      },
+
+      p: 2,
+    },
+  });
+  const { root } = useStyles();
   return (
     <Box sx={{ maxWidth: "100%" }}>
       <Box
@@ -15,7 +30,7 @@ export default function Navigation() {
           bgcolor: "#31313A",
           textAlign: "center",
           borderBottom: "1px solid gray",
-          borderRadius: "5% 5% 0 0",
+          borderRadius: "5% 0 0 0",
         }}
       >
         {" "}
@@ -24,8 +39,9 @@ export default function Navigation() {
             <Box
               sx={{
                 color: "#e0e0e1",
-                transition: "color .2s ease",
-                "&:hover": { color: "#FF9800" },
+                transition: "all .3s ease",
+                "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+
                 p: 2,
               }}
             >
@@ -47,8 +63,9 @@ export default function Navigation() {
             <Box
               sx={{
                 color: "#e0e0e1",
-                transition: "color .2s ease",
-                "&:hover": { color: "#FF9800" },
+                transition: "all .3s ease",
+                "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+
                 p: 2,
               }}
             >
@@ -70,8 +87,9 @@ export default function Navigation() {
             <Box
               sx={{
                 color: "#e0e0e1",
-                transition: "color .2s ease",
-                "&:hover": { color: "#FF9800" },
+                transition: "all .3s ease",
+                "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+
                 p: 2,
               }}
             >
@@ -92,7 +110,13 @@ export default function Navigation() {
         <Link to="contact" style={{ textDecoration: "none" }}>
           <Button>
             <Box
-              sx={{ color: "#e0e0e1", "&:hover": { color: "#FF9800" }, p: 2 }}
+              sx={{
+                color: "#e0e0e1",
+                transition: "all .3s ease",
+                "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+
+                p: 2,
+              }}
             >
               <Typography sx={{ fontWeight: "bold" }} variant="h5">
                 @
@@ -107,14 +131,20 @@ export default function Navigation() {
           bgcolor: "#31313A",
           textAlign: "center",
           borderBottom: "1px solid gray",
-          borderRadius: "0 0 5% 5% ",
+          borderRadius: "0 0 0 5% ",
         }}
       >
         <Link style={{ textDecoration: "none" }} to="/blog">
           {" "}
           <Button>
             <Box
-              sx={{ color: "#e0e0e1", "&:hover": { color: "#FF9800" }, p: 2 }}
+              sx={{
+                color: "#e0e0e1",
+                transition: "all .3s ease",
+                "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
+
+                p: 2,
+              }}
             >
               <Typography sx={{ fontWeight: "bold" }} variant="h5">
                 <BookIcon />

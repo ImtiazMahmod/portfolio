@@ -1,8 +1,9 @@
 import { Divider, TextField, Typography, Button, Toolbar } from "@mui/material";
-import { styled } from "@mui/styles";
+import { makeStyles, styled } from "@mui/styles";
 import { Box } from "@mui/system";
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
 const Contact = () => {
   const windowWidth = window.screen.width;
@@ -10,7 +11,7 @@ const Contact = () => {
   const height = windowWidth > 1024 && "38rem";
 
   //input field style
-  const CssTextField = styled(TextField)({
+  const MuiTextField = styled(TextField)({
     "& .MuiInputBase-input": {
       color: "#e0e0e1",
     },
@@ -72,8 +73,25 @@ const Contact = () => {
         }
       );
   };
+
+  ///anchor style
+  const useStyles = makeStyles({
+    root: {
+      color: "#e0e0e1",
+      transition: "all .5s ease",
+      "&:hover": {
+        color: "#FF9800",
+        transform: "scale(1.1)",
+      },
+    },
+  });
+  const { root } = useStyles();
+  const aos =
+    (windowWidth > 1024 && "fade-right") ||
+    (windowWidth > 426 ? "fade-left" : "fade-up");
   return (
     <Box
+      data-aos={aos}
       id="contact"
       sx={{
         bgcolor: "#31313A",
@@ -83,8 +101,9 @@ const Contact = () => {
         my: 2,
       }}
     >
-      <Typography variant="h6" sx={{ p: 3 }}>
-        Get in Touch
+      <Typography data-aos="fade-on" variant="h6" sx={{ p: 3 }}>
+        <span style={{ color: "#FFB30D" }}>Get </span>
+        in Touch
       </Typography>
       <Divider />
       {/* <Box
@@ -122,10 +141,10 @@ const Contact = () => {
         Contact form
       </Typography>
       <Divider /> */}
-      <form ref={form} onSubmit={handleSubmit}>
+      <form data-aos="fade-up" ref={form} onSubmit={handleSubmit}>
         <Box sx={{ mx: "auto" }}>
           {" "}
-          <CssTextField
+          <MuiTextField
             id="standard-basic"
             label="Full Name"
             name="name"
@@ -135,7 +154,7 @@ const Contact = () => {
             variant="standard"
           />{" "}
           <br />
-          <CssTextField
+          <MuiTextField
             id="standard-basic"
             label="Email"
             name="email"
@@ -145,7 +164,7 @@ const Contact = () => {
             variant="standard"
           />{" "}
           <br />
-          <CssTextField
+          <MuiTextField
             name="message"
             id="standard-basic"
             label="Your Message"
@@ -156,12 +175,9 @@ const Contact = () => {
             variant="standard"
           />
         </Box>
-        <Button
-          type="submit"
-          sx={{ m: 2, color: "#e0e0e1", "&:hover": { color: "#FF9800" } }}
-        >
+        <Button className={root} type="submit" sx={{ m: 2 }}>
           {" "}
-          SEND MESSAGE
+          SEND MESSAGE <DoubleArrowIcon />
         </Button>
       </form>
       <Toolbar />
