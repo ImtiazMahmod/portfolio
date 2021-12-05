@@ -88,7 +88,10 @@ const About = () => {
             still hear the voices of our loved ones.
           </Typography>
         </Box>
-        <Box data-aos="zoom-in" sx={{ textAlign: "center", py: 4 }}>
+        <Box
+          data-aos={windowWidth < 1024 && "zoom-in"}
+          sx={{ textAlign: "center", py: 4 }}
+        >
           <img
             style={{ borderRadius: "50%", border: "2px solid gray" }}
             src="https://i.ibb.co/82CVWx0/hero.png"
