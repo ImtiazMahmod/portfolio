@@ -107,7 +107,11 @@ export default function Home() {
               <Contact />
             </Grid>
           </Grid>
-          <Grid lg={5} sx={{ display: { xs: "none", lg: "block" } }} item>
+          <Grid
+            lg={5}
+            sx={{ display: { xs: "none", lg: "block", overflow: "hidden" } }}
+            item
+          >
             <Routes>
               <Route
                 exact
