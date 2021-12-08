@@ -16,7 +16,7 @@
         "img": "  https://i.ibb.co/YZsXbq3/super-bike1.jpg",
         "img1": "https://i.ibb.co/4RRRVLf/super-bike2.jpg",
         "img2": "https://i.ibb.co/SvtT48f/super-bike3.jpg",
-        "preview": "https://superbike-bd.web.app/",
+        "preview": "https://super-bike.netlify.app/",
         "clientSide": "https://github.com/ImtiazMahmod/super-bike",
         "serverSide": "https://github.com/ImtiazMahmod/super-bike-server",
         "description1": "A big collection of world famous bikes. MERN Stack app with admin management. Authentication system implemented. User and Admin Dashboard implemented.",
