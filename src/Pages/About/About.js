@@ -41,7 +41,8 @@ const About = () => {
       <Box data-aos="fade-up" sx={{ px: 3, color: "#A2A2A6" }}>
         <Typography>
           {" "}
-          <span style={{ color: "#e0e0e1" }}>E-mail </span> | @gmail.com
+          <span style={{ color: "#e0e0e1" }}>E-mail </span> |
+          imtiazmahmod2@gmail.com
         </Typography>
         <Typography>
           {" "}
