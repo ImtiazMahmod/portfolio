@@ -90,7 +90,7 @@ export default function Navigation() {
                 transition: "all .3s ease",
                 "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
 
-                p: 2,
+                py: 2,
               }}
             >
               <WebAssetIcon fontSize="medium" />{" "}
@@ -115,7 +115,7 @@ export default function Navigation() {
                 transition: "all .3s ease",
                 "&:hover": { color: "#FF9800", transform: "scale(1.1)" },
 
-                p: 2,
+                py: 2,
               }}
             >
               <Typography sx={{ fontWeight: "bold" }} variant="h5">

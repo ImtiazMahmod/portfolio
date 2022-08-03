@@ -37,7 +37,7 @@ const Me = () => {
   };
   const saveCV = () => {
     saveAs(
-      "https://drive.google.com/uc?export=download&id=1z31qIjlfdsqoDvJLwKIOnURYfJlPU5Qg"
+      "https://drive.google.com/uc?export=download&id=1TobsMwqcRXun-0HJYmBa8_iZ8_xjgBn-"
     );
   };
 

@@ -28,7 +28,7 @@ export default function Home() {
             height: "100vh",
           }}
         >
-          {" "}
+          {/* full width */}
           <Grid
             data-aos="fade-on"
             item
@@ -44,6 +44,7 @@ export default function Home() {
           >
             <Navigation />
           </Grid>
+          {/* medium width */}
           <Grid
             data-aos="fade-on"
             item
@@ -63,6 +64,8 @@ export default function Home() {
           >
             <NavigationMedium />
           </Grid>
+
+          {/* SMALL  WIDTH */}
           <Grid
             data-aos="fade-on"
             item
